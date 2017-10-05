@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This page allows you to create apex triggers for all of your platform events and monitors their counts.</description>
+    <label>CreateApexTriggers</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom19: Wrench</motif>
+    <page>CreatePEApexTriggersPage</page>
+</CustomTab>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveDashboard xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <content xsi:nil="true"/>
+    <application>pemonitor__IoT_Explorer</application>
+    <description>This dashboard monitors your platform events by unique name.</description>
+    <masterLabel>Platform Event Monitoring</masterLabel>
+</WaveDashboard>

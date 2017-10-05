@@ -1,0 +1,35 @@
+<apex:page controller="CreatePEApexTriggersController">
+    <apex:slds />
+    <div class="slds-page-header">
+        <div class="slds-media__body">
+          <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Create Platform Event Triggers">Create Platform Event Triggers</h1>
+          <p class="slds-text-body_small slds-line-height_reset">Choose your platform events below. Use shift-select to choose multiple events.</p>
+        </div>
+    </div>
+    <div class="slds-grid slds-grid_vertical">
+  <div class="slds-container_small" style="padding: 20px">
+        <apex:form >
+            <apex:selectList value="{!platformEvents}" multiselect="true" styleClass="slds-dueling-list__options">
+                <apex:selectOptions value="{!items}" />
+            </apex:selectList><p/>
+            
+            <apex:commandButton styleClass="slds-button slds-button_neutral" style="margin-top:20px" value="Select Platform Events" action="{!test}" rerender="out" status="status"/>
+        </apex:form>
+   </div>
+        <div class="slds-container_small" style="padding:0px 20px 20px 20px">
+            <apex:outputPanel id="out">
+            <apex:actionstatus id="status" startText="You have selected:">
+                <apex:facet name="stop">
+                    <apex:outputPanel >
+                        <p>You have selected:</p>
+                        <apex:dataList value="{!platformEvents}" var="c">{!c}</apex:dataList>
+                    </apex:outputPanel>
+                </apex:facet>
+            </apex:actionstatus>
+        </apex:outputPanel>
+            <apex:form >
+                <apex:commandButton styleClass="slds-button slds-button_brand" style="margin-top:20px" value="Create Apex Triggers" rerender="out" action="{!create}"/>
+            </apex:form>
+        </div>
+</div>
+    </apex:page>
