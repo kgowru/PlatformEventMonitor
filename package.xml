@@ -2,7 +2,6 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>PlatformEventMonitor</fullName>
     <apiAccessLevel>Unrestricted</apiAccessLevel>
-    <namespacePrefix>pemonitor</namespacePrefix>
     <types>
         <members>CreatePEApexTriggersController</members>
         <members>CreatePEApexTriggersTest</members>
@@ -39,6 +38,10 @@
         <name>ListView</name>
     </types>
     <types>
+        <members>Custom%3A Sales Profile</members>
+        <name>Profile</name>
+    </types>
+    <types>
         <members>IoT_Explorer</members>
         <name>WaveApplication</name>
     </types>
@@ -47,7 +50,7 @@
         <name>WaveDashboard</name>
     </types>
     <types>
-        <members>SalesEdgeEltWorkflow</members>
+        <members>PlatformEventsMonitoringEltWorkflow</members>
         <name>WaveDataflow</name>
     </types>
     <types>

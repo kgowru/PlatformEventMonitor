@@ -1,0 +1,34 @@
+{
+  "nodes": {
+    "RegisterCountPlatformEventsObject": {
+      "action": "register",
+      "parameters": {
+        "label": "CountPlatformEventObjects",
+        "name": "CountPlatformEventObjects"
+      },
+      "sources": [
+        "GetCountPlatformEventObjects"
+      ]
+    },
+    "GetCountPlatformEventObjects": {
+      "action": "sobjectDigest",
+      "parameters": {
+        "fields": [
+          {
+            "name": "pecount__c"
+          },
+          {
+            "name": "pelabel__c"
+          },
+          {
+            "name": "pedatetime__c"
+          },
+          {
+            "name": "pename__c"
+          }
+        ],
+        "object": "CountPlatformEvent__c"
+      }
+    }
+  }
+}
