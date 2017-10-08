@@ -38,7 +38,8 @@
         <name>ListView</name>
     </types>
     <types>
-        <members>PlatformEventMonitor</members>
+        <members>PlatformEventMonitorAdminUser</members>
+        <members>PlatformEventMonitorIntegrationUser</members>
         <name>PermissionSet</name>
     </types>
     <types>
