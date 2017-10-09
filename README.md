@@ -1,4 +1,6 @@
-Platform Event Monitor
+<img src="saleforceiot.png" align="right" />
+
+Platform Event Usage Monitor
 =======
 With the previous release of Salesforce, we introduced the Salesforce Enterprise Messaging Platform `EMP` and the events that run on it `Platform Events`. Unfortunately platform events are short lived (sub 24 hours) and are not logged anywhere in the Salesforce system unless strictly subscribed to. Thus not only is it hard to track these events but you also have no ability to debug if these events are coming to your org and hitting the various systems that digest the events. This unmanaged package exists to remedy some of those issues.
 
@@ -38,7 +40,7 @@ When completed the org should have an Einstein Analytics dashboard to centrally 
 
 Note: This doesn't count previously sent platform events and only captures platform events after the install of this package.
 
-## Metadata Config
+## Metadata
 
 This is all of the metadata that will deploy on your org.
 
