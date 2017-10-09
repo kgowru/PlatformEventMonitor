@@ -1,4 +1,4 @@
-<img src="saleforceiot.png" align="right" />
+<img src="salesforceiot.png" align="right" />
 
 Platform Event Usage Monitor
 =======
