@@ -2,7 +2,7 @@
 
 Platform Event Usage Monitor
 =======
-With the previous release of Salesforce, we introduced the Salesforce Enterprise Messaging Platform `EMP` and the events that run on it `Platform Events`. Platform Events can be used to take various actions in Salesforce but are also a core part of Salesforce IoT Explorer. They are the means of device data ingestion into the IoT Explorer orchestrations.
+With the previous release of Salesforce, we introduced the Salesforce Enterprise Messaging Platform `EMP` and the events that run on it `Platform Events`.
 
 Unfortunately platform events are short lived (sub 24 hours) and are not logged anywhere in the Salesforce system unless strictly subscribed to. Thus not only is it hard to track these events but you also have no ability to debug if these events are coming to your org and hitting the various systems that digest the events. This unmanaged package exists to remedy some of those issues.
 
@@ -91,6 +91,9 @@ Schedule your Einstein Analytics Dataflow to run at a scheduled time to create t
 
 If you want to get immediate data you can run the Dataflow now by choosing `start` in the dropdown.
 <img src="img/dataflowstart.png" align="center" />
+
+When the Einstein Analytics Dataflow is completed, you should be able to open the Platform Event Monitoring dashboard and see this.
+<img src="img/dashboard.png" align="center" />
 
 Note: This doesn't count previously sent platform events and only captures platform events after the install of this package.
 
