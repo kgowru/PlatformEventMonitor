@@ -4,11 +4,11 @@ With the previous release of Salesforce, we introduced the Salesforce Enterprise
 
 The unmanaged, when installed, offers a Visualforce page that allows you to create [APEX triggers](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers.htm) on your [Platform Events](https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_intro_emp.htm), a Custom Salesforce Object to track these Platform Events and an Einstein Analytics App with Einstein Analytics Dashboard in your org. It is recommended to create the Apex Triggers on *all* of your platform events and a Einstein Analytics App that lets you monitor the platform events and their count.
 
-##Getting Started
+## Getting Started
 
 This package is intended for admins who have access to Platform Events and Einstein Analytics.
 
-###Prerequisites
+### Prerequisites
 ```
 - Einstein Analytics
 - Platform Events
@@ -16,7 +16,7 @@ This package is intended for admins who have access to Platform Events and Einst
 - Wave Admin Access
 ```
 
-###Installing
+### Installing
 
 Click the link below to deploy the metadata in this package into your org. If unsuccessful you should see a warning on this Heroku app.
 
@@ -25,7 +25,7 @@ Click the link below to deploy the metadata in this package into your org. If un
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
-###Setup Process
+### Setup Process
 
 The org should be setup with Einstein Analytics. This means that the org has the necessary licenses and the feature is enabled in the setup tree. The user that is downloading the managed package should also have have the Einstein Analytics admin perms assigned to them so they can execute/load dataflows. In addition, the org has at least one Platform Events to create Apex Triggers on.
 
@@ -38,11 +38,11 @@ When completed the org should have an Einstein Analytics dashboard to centrally 
 
 Note: This doesn't count previously sent platform events and only captures platform events after the install of this package.
 
-##Metadata Config
+## Metadata Config
 
 This is all of the metadata that will deploy on your org.
 
-###Fields
+### Fields
 
 | Component Name | Parent Object  | Component Type  |
 |------|---|---|
@@ -52,7 +52,7 @@ This is all of the metadata that will deploy on your org.
 |pelabel   |  CountPlatformEvent | Custom Field  |
 |pecount   |  CountPlatformEvent | Custom Field  |
 
-###Code
+### Code
 
 | Component Name | Parent Object  | Component Type  |
 |------|---|---|
@@ -60,20 +60,20 @@ This is all of the metadata that will deploy on your org.
 | CreatePEApexTriggersTest     |   |  Apex Class |
 | ExampleCalloutMock     |   |  Apex Class |
 
-###Resources
+### Resources
 
 | Component Name | Parent Object  | Component Type  |
 |------|---|---|
 |CustomPlatformEvent Layout      |CountPlatformEvent   |  Page Layout |
 | All     |  CountPlatformEvent |  	List View |
 
-###Pages
+### Pages
 
 | Component Name | Parent Object  | Component Type  |
 |------|---|---|
 |CreatePEApexTriggersPage      |   |  Visualforce Page|
 
-###Wave Components
+### Wave Components
 
 | Component Name | Parent Object  | Component Type  |
 |------|---|---|
@@ -83,20 +83,20 @@ This is all of the metadata that will deploy on your org.
 | Platform_Event_Monitoring  |   |Wave Lens   |
 |SalesEdgeEltWorkflow   |   | Wave Dataflow  |
 
-###Permission Settings
+### Permission Settings
 
 | Component Name | Parent Object  | Component Type  |
 |------|---|---|
 |PlatformEventMonitorAdminUser      |   | Permission Set |
 |PlatformEventMonitorIntegrationUser   |   | Permission Set  |
 
-###Objects
+### Objects
 
 | Component Name | Parent Object  | Component Type  |
 |------|---|---|
 |CountPlatformEvent      |   | Custom Object |
 
-###Tabs
+### Tabs
 
 | Component Name | Parent Object  | Component Type  |
 |------|---|---|
