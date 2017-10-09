@@ -8,6 +8,24 @@ Unfortunately platform events are short lived (sub 24 hours) and are not logged 
 
 The unmanaged, when installed, offers a Visualforce page that allows you to create [APEX triggers](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers.htm) on your [Platform Events](https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_intro_emp.htm), a Custom Salesforce Object to track these Platform Events and an Einstein Analytics App with Einstein Analytics Dashboard in your org. It is recommended to create the Apex Triggers on *all* of your platform events and a Einstein Analytics App that lets you monitor the platform events and their count.
 
+## Table of Contents
+
+   * [Platform Event Usage Monitor](#platform-event-usage-monitor)
+      * [Getting Started](#getting-started)
+         * [Prerequisites](#prerequisites)
+         * [Installing](#installing)
+         * [Setup Process](#setup-process)
+      * [Metadata](#metadata)
+         * [Fields](#fields)
+         * [Code](#code)
+         * [Resources](#resources)
+         * [Pages](#pages)
+         * [Wave Components](#wave-components)
+         * [Permission Settings](#permission-settings)
+         * [Objects](#objects)
+         * [Tabs](#tabs)
+
+
 ## Getting Started
 
 This package is intended for admins who have access to Platform Events and Einstein Analytics.
@@ -52,11 +70,27 @@ Go to Setup and search for Remote Site Settings. On this page add your url as a 
 
 <img src="img/saveremote.png" align="center" />
 
-Assign yourself the PlatformEventMonitorAdminUser permission set. Then assign the Integration User (w/ Analytics Cloud Integration User) the PlatformEventMonitorIntegrationUser permission set. Now make sure you can see the “CountPlatformEvents” and “CreateApexTriggers” tabs.
+Assign yourself the PlatformEventMonitorAdminUser permission set.
+<img src="img/permsets.png" align="center" />
+<img src="img/adminuserperm.png" align="center" />
+<img src="img/addadminuser.png" align="center" />
 
-After that go to the CreateApexTriggers tab, choose your platform events and then click on the 'Create Triggers' button. You should now automatically have ApexTriggers created for each of the org's platform events to monitor counts.
+Then assign the Einstein Analytics `Integration User` (Analytics Cloud Integration User) and Einstein Analytics `Security User` (Analytics Cloud Security User) the PlatformEventMonitorIntegrationUser permission set.
+<img src="img/integrationuserperm.png" align="center" />
+<img src="img/addintegrationuser.png" align="center" />
 
-When completed the org should have an Einstein Analytics dashboard to centrally monitor all of your platform events.
+After that go to the CreateApexTriggers tab, choose your platform events and then click on the 'Create Triggers' button. You should now have ApexTriggers created for each of the chosen platform events to monitor counts.
+<img src="img/createtriggers.png" align="center" />
+
+Schedule your Einstein Analytics Dataflow to run at a scheduled time to create the required dataset for the Einstein Analytics Dashboard.
+<img src="img/einsteinanalytics.png" align="center" />
+<img src="img/datamanager.png" align="center" />
+<img src="img/dataflowschedule.png" align="center" />
+<img src="img/dataflowschedulesetup.png" align="center" />
+
+
+If you want to get immediate data you can run the Dataflow now by choosing `start` in the dropdown.
+<img src="img/dataflowstart.png" align="center" />
 
 Note: This doesn't count previously sent platform events and only captures platform events after the install of this package.
 
