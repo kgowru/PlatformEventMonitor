@@ -29,8 +29,8 @@ Click the link below to deploy the metadata in this package into your org. If un
 
 The org should be setup with Einstein Analytics. This means that the org has the necessary licenses and the feature is enabled in the setup tree. The user that is downloading the managed package should also have have the Einstein Analytics admin perms assigned to them so they can execute/load dataflows. In addition, the org has at least one Platform Events to create Apex Triggers on.
 
-* You need to add your org's URL in the Remote Site Settings. To get the URL you need to use the Execute Anonymous in the developer console and grab the debug log after executing the following statement: System.debug(URL.getSalesforceBaseUrl().toExternalForm());
-* This uses the URL class to get the base URL. After you grab the URL from the debug log, go to Setup and search for Remote Site Settings. On this page add your url as a remote site.
+* You need to add your org's URL in the Remote Site Settings. To get the URL you need to use the Execute Anonymous in the developer console and grab the debug log after executing the following statement: `System.debug(URL.getSalesforceBaseUrl().toExternalForm());` This uses the URL class to get the base URL.
+*  After you grab the URL from the debug log, go to Setup and search for Remote Site Settings. On this page add your url as a remote site.
 * Assign yourself the PlatformEventMonitorAdminUser permission set. Then assign the Integration User (w/ Analytics Cloud Integration User) the PlatformEventMonitorIntegrationUser permission set. Now make sure you can see the “CountPlatformEvents” and “CreateApexTriggers” tabs.
 * After that go to the CreateApexTriggers tab, choose your platform events and then click on the 'Create Triggers' button. You should now automatically have ApexTriggers created for each of the org's platform events to monitor counts.
 
