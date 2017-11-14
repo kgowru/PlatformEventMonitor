@@ -6,7 +6,7 @@ With the previous release of Salesforce, we introduced the Salesforce Enterprise
 
 Unfortunately platform events are short lived (sub 24 hours) and are not logged anywhere in the Salesforce system unless strictly subscribed to. Thus not only is it hard to track these events but you also have no ability to debug if these events are coming to your org and hitting the various systems that digest the events. This unmanaged package exists to remedy some of those issues.
 
-The unmanaged, when installed, offers a Visualforce page that allows you to create [APEX triggers](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers.htm) on your [Platform Events](https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_intro_emp.htm), a Custom Salesforce Object to track these Platform Events and an Einstein Analytics App with Einstein Analytics Dashboard in your org. It is recommended to create the Apex Triggers on *all* of your platform events and a Einstein Analytics App that lets you monitor the platform events and their count.
+The unmanaged, when installed, offers a Visualforce page that allows you to create [APEX triggers](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers.htm) on your [Platform Events](https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_intro_emp.htm), a Custom Salesforce Object to track these Platform Events and an Einstein Analytics App with Einstein Analytics Dashboard in your org to visualize the metrics. It is recommended to create the Apex Triggers on *all* of your platform events.
 
 ## Table of Contents
 
